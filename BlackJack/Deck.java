@@ -25,8 +25,9 @@ public class Deck{
     deckOfCards.add(card);
   }
 
-  public void removeCard(Card card){
-    deckOfCards.remove(card);
+  public Card removeCard(int index){
+   Card result = deckOfCards.remove(index);
+   return result;
   }
 
   public void createDeckOfCards(){
@@ -38,6 +39,8 @@ public class Deck{
       i++;
     }
   }
+
+  
 
   // public void shuffleDeck(){
   //   deckOfCards.shuffle();

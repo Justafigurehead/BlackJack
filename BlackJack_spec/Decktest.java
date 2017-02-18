@@ -38,12 +38,12 @@ public class DeckTest{
     assertEquals(2, deck.getDeckSize());
   }
 
-  @Test 
-  public void getCardFromOrderedDeck(){
-    deck.addToDeck(ten);
-    deck.removeCard(ten);
-    assertEquals("Ten", ten.getName());   
-  }
+  // @Test 
+  // public void getCardFromDeck(){
+  //   deck.addToDeck(ten);
+  //   deck.removeCard(ten);
+  //   assertEquals("Ten", ten.getName());   
+  // }
 
   @Test 
   public void makeMultipleCardsAndAddThemToArray(){
@@ -51,17 +51,23 @@ public class DeckTest{
     assertEquals(14, deck.getDeckSize());
   }
 
-  // @Test 
-  // public void getAParticularCardFromParticularSpotInOrderedDeck(){
-  //   deck.add(ten);
-  //   deck.removeCard(9);
-  //   assertEquals("ten", two.getName());   
-  // }
+  @Test 
+  public void getAParticularCardFromParticularSpotInOrderedDeck(){
+    deck.createDeckOfCards();
+    Card ten = deck.removeCard(9);
+    assertEquals("Ten", ten.getName());   
+  }
 
-  // @Test 
-  // public void checkDeckIsInOrder(){
-  //   assertEquals([], deck.getDeckArr());
-  // }
+  @Test 
+  public void checkDeckIsInOrder(){
+  deck.createDeckOfCards();
+  Card ace = deck.removeCard(0);
+  assertEquals("Ace", ace.getName()); 
+  Card two = deck.removeCard(0);
+  assertEquals("Two", two.getName());
+  Card three = deck.removeCard(0);
+  assertEquals("Three", three.getName());
+  }
 
   // @Test 
   // public void checkGeneratedCardsHaveProperValues(){
