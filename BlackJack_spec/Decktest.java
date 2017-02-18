@@ -6,10 +6,12 @@ import BlackJack.*;
 public class DeckTest{
 
   Deck deck;
+  Card queen;
 
   @Before
   public void before(){
     deck = new Deck();
+    queen = new Card("Queen", 10);
   }
 
 
@@ -20,4 +22,22 @@ public class DeckTest{
   public void testEmptyDeckArray(){
     assertEquals(0, deck.getDeckSize());
   }
+
+  @Test 
+  public void testAddCardToDeck(){
+    deck.addToDeck(queen);
+    assertEquals(1, deck.getDeckSize());
+  }
+
+  // @Test 
+  // public void testCanAddMultipleCardsToDeck(){
+
+  // }
+
+  // @Test 
+  // public void testIfDeckIsShuffled(){
+
+  // }
+
+
 }

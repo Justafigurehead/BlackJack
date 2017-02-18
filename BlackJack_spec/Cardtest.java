@@ -11,8 +11,8 @@ public class CardTest{
 
   @Before
   public void before(){
-    one = new Card(1);
-    ace = new Card(11);
+    one = new Card("one", 1);
+    ace = new Card("ace", 11);
   }
 
   // TESTS for basic card
