@@ -7,11 +7,13 @@ public class DeckTest{
 
   Deck deck;
   Card queen;
+  Card ten;
 
   @Before
   public void before(){
     deck = new Deck();
     queen = new Card("Queen", 10);
+    ten = new Card("Ten", 10);
   }
 
 
@@ -29,15 +31,51 @@ public class DeckTest{
     assertEquals(1, deck.getDeckSize());
   }
 
-  // @Test 
-  // public void testCanAddMultipleCardsToDeck(){
+  @Test 
+  public void testCanAddMultipleCardsToDeck(){
+    deck.addToDeck(queen);
+    deck.addToDeck(ten);
+    assertEquals(2, deck.getDeckSize());
+  }
 
+  @Test 
+  public void getCardFromOrderedDeck(){
+    deck.addToDeck(ten);
+    deck.removeCard(ten);
+    assertEquals("Ten", ten.getName());   
+  }
+
+  // @Test 
+  // public void makeMultipleCardsAndAddThemToArray(){
+  //   deck.createDeckOfCards();
+  //   assertEquals(12, deck.getDeckSize());
+  // }
+
+  // @Test 
+  // public void getAParticularCardFromParticularSpotInOrderedDeck(){
+  //   deck.add(ten);
+  //   deck.removeCard(9);
+  //   assertEquals("ten", two.getName());   
+  // }
+
+  // @Test 
+  // public void checkDeckIsInOrder(){
+  //   assertEquals([], deck.getDeckArr());
+  // }
+
+  // @Test 
+  // public void checkGeneratedCardsHaveProperValues(){
+
+  //   deck.createDeckOfCards();
+  //   two = 
+  //   assertEquals(2, two.getValue());
   // }
 
   // @Test 
   // public void testIfDeckIsShuffled(){
 
   // }
+
 
 
 }

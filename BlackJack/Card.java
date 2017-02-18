@@ -17,4 +17,8 @@ public class Card{
   public void setValue(int newValue){
     this.cardValue = newValue;
   }
+
+  public String getName(){
+    return this.cardName;
+  }
 }

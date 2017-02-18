@@ -11,8 +11,8 @@ public class CardTest{
 
   @Before
   public void before(){
-    one = new Card("one", 1);
-    ace = new Card("ace", 11);
+    one = new Card("One", 1);
+    ace = new Card("Ace", 11);
   }
 
   // TESTS for basic card
@@ -27,5 +27,11 @@ public class CardTest{
     ace.setValue(1);
     assertEquals(1, ace.getValue());
   }
+
+  @Test 
+  public void testGetCardName(){
+    assertEquals("Ace", ace.getName());
+  }
+
 
 }

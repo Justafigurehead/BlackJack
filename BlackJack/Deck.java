@@ -22,6 +22,11 @@ public class Deck{
     deckOfCards.add(card);
   }
 
+  public void removeCard(Card card){
+    deckOfCards.remove(card);
+  }
+
+
   // public void shuffleDeck(){
   //   deckOfCards.shuffle();
   // }
