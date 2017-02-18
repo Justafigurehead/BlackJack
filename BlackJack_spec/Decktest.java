@@ -15,7 +15,7 @@ public class DeckTest{
 
 // Tests for Basic Deck
 
-  
+
   @Test
   public void testEmptyDeckArray(){
     assertEquals(0, deck.getDeckSize());

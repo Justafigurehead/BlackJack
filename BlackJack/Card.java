@@ -2,10 +2,12 @@ package BlackJack;
 
 public class Card{
 
-  int cardValue;
+  private int cardValue;
+  private String cardName;
 
   public Card(int cardValue){
     this.cardValue = cardValue;
+    this.cardName = cardName;
   }
 
   public int getValue(){
