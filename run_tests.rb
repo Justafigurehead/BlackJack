@@ -12,9 +12,9 @@ end
 def run_tests(files)
   for file in files
     fileName = File.basename(file, ".*")
-    puts "Running the following files: #{fileName}"
+    puts "Running #{fileName}"
 
-    system(".java org.junit.runner.JUnitCore #{fileName}")
+    system("java org.junit.runner.JUnitCore #{fileName}")
   end
 end
 
