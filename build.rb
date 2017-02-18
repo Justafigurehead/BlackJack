@@ -1,3 +1,5 @@
+require 'fileutils'
+
 def filter_directories
 
   excluded_directories = ["bin"]
