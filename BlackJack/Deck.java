@@ -5,7 +5,10 @@ import java.util.ArrayList;
 
 public class Deck{
 
+   
   private ArrayList<Card> deckOfCards;
+
+
 
   public Deck(){
     this.deckOfCards = new ArrayList<Card>();    
@@ -26,6 +29,15 @@ public class Deck{
     deckOfCards.remove(card);
   }
 
+  public void createDeckOfCards(){
+    String[] names = {"Ace","Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine","Ten", "Jack", "Queen", "King", "AcesHigh"};
+    int[] values = new int[]{1, 2,3,4,5,6,7,8,9,10, 10, 10, 10, 11};
+    int i = 0;
+    while ( i < names.length) {
+      deckOfCards.add(new Card(names[i], values[i]));
+      i++;
+    }
+  }
 
   // public void shuffleDeck(){
   //   deckOfCards.shuffle();

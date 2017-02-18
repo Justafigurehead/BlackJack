@@ -45,11 +45,11 @@ public class DeckTest{
     assertEquals("Ten", ten.getName());   
   }
 
-  // @Test 
-  // public void makeMultipleCardsAndAddThemToArray(){
-  //   deck.createDeckOfCards();
-  //   assertEquals(12, deck.getDeckSize());
-  // }
+  @Test 
+  public void makeMultipleCardsAndAddThemToArray(){
+    deck.createDeckOfCards();
+    assertEquals(14, deck.getDeckSize());
+  }
 
   // @Test 
   // public void getAParticularCardFromParticularSpotInOrderedDeck(){
