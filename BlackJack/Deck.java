@@ -1,5 +1,6 @@
 package BlackJack;
 import java.util.ArrayList;
+import java.util.Collections;
 
 
 
@@ -45,7 +46,7 @@ public class Deck{
   //     return "Suit: " + this.suit + " / " + "Value: " + this.value;
   // }
 
-  // public void shuffleDeck(){
-  //   deckOfCards.shuffle();
-  // }
+  public void shuffleDeck(){
+     Collections.shuffle(this.deckOfCards);
+  }
 }

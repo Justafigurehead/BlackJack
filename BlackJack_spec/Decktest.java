@@ -1,6 +1,7 @@
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 import org.junit.Before;
+import java.util.ArrayList;
 import BlackJack.*;
 
 public class DeckTest{
@@ -69,6 +70,8 @@ public class DeckTest{
   assertEquals("Three", three.getName());
   }
 
+// Refactor tests by reducing it to printing out card name and value toString rather than two separate tests.
+
   @Test 
   public void checkGeneratedCardsHaveProperValues(){
     deck.createDeckOfCards();
@@ -80,10 +83,15 @@ public class DeckTest{
     assertEquals(3, three.getValue());
   }
 
-  // @Test 
-  // public void testIfDeckIsShuffled(){
 
-  // }
+// Commented out because it fails due to random order but works! :) 
+  @Test 
+  public void testIfDeckIsShuffled(){
+    deck.createDeckOfCards();
+    deck.shuffleDeck();
+    Card wild = deck.removeCard(0);
+    assertEquals(1, wild.getValue());
+  }
 
 
 
