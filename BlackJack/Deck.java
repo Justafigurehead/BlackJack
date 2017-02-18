@@ -40,7 +40,10 @@ public class Deck{
     }
   }
 
-  
+  // How to print out an array to a String.
+  // public String toString() { 
+  //     return "Suit: " + this.suit + " / " + "Value: " + this.value;
+  // }
 
   // public void shuffleDeck(){
   //   deckOfCards.shuffle();

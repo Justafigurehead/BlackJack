@@ -69,13 +69,16 @@ public class DeckTest{
   assertEquals("Three", three.getName());
   }
 
-  // @Test 
-  // public void checkGeneratedCardsHaveProperValues(){
-
-  //   deck.createDeckOfCards();
-  //   two = 
-  //   assertEquals(2, two.getValue());
-  // }
+  @Test 
+  public void checkGeneratedCardsHaveProperValues(){
+    deck.createDeckOfCards();
+    Card ace = deck.removeCard(0);
+    assertEquals(1, ace.getValue()); 
+    Card two = deck.removeCard(0);
+    assertEquals(2, two.getValue());
+    Card three = deck.removeCard(0);
+    assertEquals(3, three.getValue());
+  }
 
   // @Test 
   // public void testIfDeckIsShuffled(){
