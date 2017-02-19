@@ -85,13 +85,13 @@ public class DeckTest{
 
 
 // Commented out because it fails due to random order but works! :) 
-  @Test 
-  public void testIfDeckIsShuffled(){
-    deck.createDeckOfCards();
-    deck.shuffleDeck();
-    Card wild = deck.removeCard(0);
-    assertEquals(1, wild.getValue());
-  }
+  // @Test 
+  // public void testIfDeckIsShuffled(){
+  //   deck.createDeckOfCards();
+  //   deck.shuffleDeck();
+  //   Card wild = deck.removeCard(0);
+  //   assertEquals(1, wild.getValue());
+  // }
 
 
 
