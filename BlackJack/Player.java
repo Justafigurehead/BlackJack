@@ -20,4 +20,8 @@ public class Player {
   public int getHandSize(){
     return this.hand.size();
   }
+
+  public void addToHand(Card card){
+    hand.add(card);
+  }
 }

@@ -9,10 +9,12 @@ import BlackJack.*;
 public class PlayerTest{
 
   private Player playerOne;
+  private Card ace;
 
   @Before
   public void before(){
     playerOne = new Player("Mickie");
+    ace = new Card("Ace", 1);
   }
 
 
@@ -27,6 +29,11 @@ public class PlayerTest{
     assertEquals(0, playerOne.getHandSize());
   }
 
+  @Test
+  public void giveCardToPlayer(){
+    playerOne.addToHand(ace);
+    assertEquals(1, playerOne.getHandSize());
+  }
 
 
 // EXPANSION

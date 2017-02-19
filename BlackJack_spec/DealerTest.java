@@ -1,16 +1,17 @@
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 import org.junit.Before;
-
 import BlackJack.*;
 
 public class DealerTest{
 
   Dealer dealer;
+  Player playerOne;
 
   @Before
   public void before(){
     dealer = new Dealer();
+    playerOne = new Player("Mickie");
   }
 
 //  Dealer Tests
@@ -46,7 +47,10 @@ public class DealerTest{
 
   @Test 
   public void dealerGivesCardToPlayer(){
-
+    dealer.getReadyToPlay();
+    Card topCard = dealer.takesTopCard();
+    playerOne.addToHand(topCard);
+    assertEquals(1, playerOne.getHandSize());
   }
 
   @Test 
