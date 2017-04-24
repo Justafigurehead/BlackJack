@@ -1,4 +1,4 @@
-# BlackJack_homework
+# BlackJack
 Code Kata
 
 Initial practise at BlackJack using Java classes.
